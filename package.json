@@ -2,11 +2,15 @@
   "name": "directus-extensions",
   "version": "0.0.0",
   "description": "DirectusExtensions",
-  "main": "server.js",
-  "author": {
-    "name": ""
+  "main":"index.js",
+  "directus:extension": {
+    "type": "module",
+    "path": "Pets/dist/index.js",
+    "source": "Pets/src/index.js",
+    "host": "^9.0.0-rc.93",
+    "hidden": false
   },
-  "dependencies": {
+  "devDependencies": {
     "@directus/extensions-sdk": "^9.0.0-rc.93"
   }
 }
