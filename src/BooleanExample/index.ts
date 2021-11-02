@@ -1,4 +1,5 @@
 import { defineInterface } from '@directus/shared/utils';
+<<<<<<< HEAD:src/BooleanExample/index.ts
 import InterfaceBooleanExample from './boolean.vue';
 
 export default defineInterface({
@@ -7,6 +8,16 @@ export default defineInterface({
 	description: '$t:interfaces.boolean.description',
 	icon: 'check_box',
 	component: InterfaceBooleanExample,
+=======
+import InterfaceBooleanNullable from './boolean-nullable.vue';
+
+export default defineInterface({
+	id: 'boolean',
+	name: '$t:interfaces.boolean.nullable',
+	description: '$t:interfaces.boolean.description',
+	icon: 'check_box',
+	component: InterfaceBooleanNullable,
+>>>>>>> 69c6771784f280f893f4b99dab5667989e3a464c:src/BooleanNullable/index.js
 	types: ['boolean'],
 	group: 'selection',
 	recommendedDisplays: ['boolean'],
