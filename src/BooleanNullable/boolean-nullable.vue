@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts">
+    import { useI18n } from 'vue-i18n';
 	import { defineComponent } from 'vue';
-	import { i18n } from '@/lang';
 
 	export default defineComponent({
 		props: {
@@ -28,7 +28,7 @@
 			},
 			label: {
 				type: String,
-				default: () => i18n.global.t('enabled'),
+				default: null
 			},
 			iconOn: {
 				type: String,
@@ -45,6 +45,8 @@
 		},
 		emits: ['input'],
 		setup(props, context) {
+            const { t } = useI18n();
+
 			const toggleInput = () => {
 				if (props.value === null) {
 					context.emit('input', true);
@@ -55,7 +57,9 @@
 				}
 			};
 
-			return { toggleInput };
+			props.label = t('enabled');
+
+            return { t, toggleInput };
 		},
 	});
 </script>

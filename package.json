@@ -2,7 +2,7 @@
   "name": "directus-extensions",
   "version": "0.0.0",
   "description": "DirectusExtensions",
-  "main":"index.js",
+  "main": "index.js",
   "directus:extension": {
     "type": "module",
     "path": "dist/BooleanDropdown/index.js",
@@ -12,5 +12,7 @@
   },
   "devDependencies": {
     "@directus/extensions-sdk": "^9.0.0-rc.99"
+  },
+  "dependencies": {
   }
 }
