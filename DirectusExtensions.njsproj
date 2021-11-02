@@ -32,18 +32,12 @@
     <Content Include="BooleanNullable\src\boolean-nullable.vue" />
     <Content Include="BooleanNullable\src\index.js" />
     <Content Include="package.json" />
-    <Content Include="Pets\Directus Modules Build - adapt package.json - YouTube.url" />
-    <Content Include="Pets\src\module.vue" />
-    <Content Include="Pets\src\index.js" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BooleanNullable\" />
     <Folder Include="BooleanNullable\dist\" />
     <Folder Include="BooleanNullable\src\" />
-    <Folder Include="Pets\" />
-    <Folder Include="Pets\dist\" />
-    <Folder Include="Pets\src\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

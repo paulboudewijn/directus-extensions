@@ -1,70 +1,61 @@
 <template>
-	<div class="boolean" :style="styles">
-		<value-null v-if="value === null" >UNKNOWN</value-null>
-		<template v-else>
-			<v-icon v-if="iconOn !== null && iconOff !== null" :name="value ? iconOn : iconOff"></v-icon>
-			<span v-if="labelOn !== null && labelOff !== null">{{ value ? labelOn : labelOff }}</span>
-		</template>
-	</div>
+	<v-checkbox block
+				:icon-on="iconOn"
+				:icon-off="iconOff"
+				:label="label"
+				:model-value="value"
+				:indeterminate="value === null"
+				:disabled="disabled"
+				:style="{
+					'--v-checkbox-color': color,
+				}"
+				@click.stop="toggleInput" />
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
+	import { defineComponent } from 'vue';
+	import { i18n } from '@/lang';
 
-export default defineComponent({
-	props: {
-		value: {
-			type: Boolean,
-			default: false,
+	export default defineComponent({
+		props: {
+			value: {
+				type: Boolean,
+				default: null,
+			},
+			disabled: {
+				type: Boolean,
+				default: false,
+			},
+			label: {
+				type: String,
+				default: () => i18n.global.t('enabled'),
+			},
+			iconOn: {
+				type: String,
+				default: 'check_box',
+			},
+			iconOff: {
+				type: String,
+				default: 'check_box_outline_blank',
+			},
+			color: {
+				type: String,
+				default: '#00C897',
+			},
 		},
-		labelOn: {
-			type: String,
-			default: null,
-		},
-		labelOff: {
-			type: String,
-			default: null,
-		},
-		iconOn: {
-			type: String,
-			default: 'check',
-		},
-		iconOff: {
-			type: String,
-			default: 'close',
-		},
-		colorOn: {
-			type: String,
-			default: '#00C897',
-		},
-		colorOff: {
-			type: String,
-			default: '#B0BEC5',
-		},
-	},
-	setup(props) {
-		const styles = computed(() => {
-			const style: Record<string, any> = {};
+		emits: ['input'],
+		setup(props, context) {
+			const toggleInput = () => {
+				if (props.value === null) {
+					context.emit('input', true);
+				} else if (props.value === false) {
+					context.emit('input', null);
+				} else {
+					context.emit('input', false);
+				}
+			};
 
-			if (props.colorOn !== null && props.colorOff !== null) {
-				style['color'] = props.value ? props.colorOn : props.colorOff;
-				style['--v-icon-color'] = props.value ? props.colorOn : props.colorOff;
-			}
-			return style;
-		});
-
-		return { styles };
-	},
-});
+			return { toggleInput };
+		},
+	});
 </script>
-
-<style lang="scss" scoped>
-.boolean {
-	display: inline-flex;
-	align-items: center;
-
-	.v-icon {
-		margin-right: 4px;
-	}
-}
-</style>

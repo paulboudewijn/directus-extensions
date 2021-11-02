@@ -1,85 +1,66 @@
 import { defineDisplay } from '@directus/shared/utils';
 import DisplayBooleanNullable from './boolean-nullable.vue';
 
-export default defineDisplay({
-	id: 'boolean-nullable',
-	name: 'Boolean (nullable)',
-	description: 'three-state boolean',
-	types: ['boolean'],
+export default defineInterface({
+	id: 'boolean',
+	name: '$t:interfaces.boolean.toggle',
+	description: '$t:interfaces.boolean.description',
 	icon: 'check_box',
-	handler: DisplayBooleanNullable,
+	component: InterfaceBoolean,
+	types: ['boolean'],
+	group: 'selection',
+	recommendedDisplays: ['boolean'],
 	options: [
 		{
-			field: 'labelOn',
-			name: '$t:displays.boolean.label_on',
-			type: 'string',
-			meta: {
-				interface: 'input',
-				width: 'half',
-				options: {
-					placeholder: '$t:displays.boolean.label_on_placeholder',
-				},
-			},
-		},
-		{
-			field: 'labelOff',
-			name: '$t:displays.boolean.label_off',
-			type: 'string',
-			meta: {
-				interface: 'input',
-				width: 'half',
-				options: {
-					placeholder: '$t:displays.boolean.label_off_placeholder',
-				},
-			},
-		},
-		{
 			field: 'iconOn',
-			name: '$t:displays.boolean.icon_on',
+			name: '$t:icon_on',
 			type: 'string',
 			meta: {
-				interface: 'select-icon',
 				width: 'half',
+				interface: 'select-icon',
 			},
 			schema: {
-				default_value: 'check',
+				default_value: 'check_box',
 			},
 		},
 		{
 			field: 'iconOff',
-			name: '$t:displays.boolean.icon_off',
+			name: '$t:icon_off',
 			type: 'string',
 			meta: {
-				interface: 'select-icon',
 				width: 'half',
+				interface: 'select-icon',
 			},
 			schema: {
-				default_value: 'close',
+				default_value: 'check_box_outline_blank',
 			},
 		},
 		{
-			field: 'colorOn',
-			name: '$t:displays.boolean.color_on',
+			field: 'label',
+			name: '$t:label',
 			type: 'string',
 			meta: {
-				interface: 'select-color',
 				width: 'half',
+				interface: 'input',
+				options: {
+					placeholder: '$t:interfaces.boolean.label_placeholder',
+				},
+			},
+			schema: {
+				default_value: '$t:interfaces.boolean.label_default',
+			},
+		},
+		{
+			field: 'color',
+			name: '$t:color',
+			type: 'string',
+			meta: {
+				width: 'half',
+				interface: 'select-color',
 			},
 			schema: {
 				default_value: '#00C897',
 			},
-		},
-		{
-			field: 'colorOff',
-			name: '$t:displays.boolean.color_off',
-			type: 'string',
-			meta: {
-				interface: 'select-color',
-				width: 'half',
-			},
-			schema: {
-				default_value: '#B0BEC5',
-			},
-		},
+		}
 	],
 });
