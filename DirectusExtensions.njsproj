@@ -35,77 +35,16 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\BooleanDropdown\boolean-dropdown.vue" />
-    <Content Include="src\BooleanExample\boolean.vue" />
     <Content Include="src\BooleanNullable\boolean-nullable.vue" />
     <Content Include="src\BooleanNullable\index.js" />
-    <Content Include="src\lang\available-languages.yaml" />
-    <Content Include="src\lang\date-formats.yaml" />
-    <Content Include="src\lang\number-formats.yaml" />
-    <Content Include="src\lang\readme.md" />
-    <Content Include="src\lang\translations\af-ZA.yaml" />
-    <Content Include="src\lang\translations\ar-SA.yaml" />
-    <Content Include="src\lang\translations\bg-BG.yaml" />
-    <Content Include="src\lang\translations\bn-IN.yaml" />
-    <Content Include="src\lang\translations\br-FR.yaml" />
-    <Content Include="src\lang\translations\ca-ES.yaml" />
-    <Content Include="src\lang\translations\cs-CZ.yaml" />
-    <Content Include="src\lang\translations\da-DK.yaml" />
-    <Content Include="src\lang\translations\de-DE.yaml" />
-    <Content Include="src\lang\translations\el-GR.yaml" />
-    <Content Include="src\lang\translations\en-US.yaml" />
-    <Content Include="src\lang\translations\es-419.yaml" />
-    <Content Include="src\lang\translations\es-CL.yaml" />
-    <Content Include="src\lang\translations\es-ES.yaml" />
-    <Content Include="src\lang\translations\et-EE.yaml" />
-    <Content Include="src\lang\translations\fa-IR.yaml" />
-    <Content Include="src\lang\translations\fi-FI.yaml" />
-    <Content Include="src\lang\translations\fr-FR.yaml" />
-    <Content Include="src\lang\translations\he-IL.yaml" />
-    <Content Include="src\lang\translations\hi-IN.yaml" />
-    <Content Include="src\lang\translations\hu-HU.yaml" />
-    <Content Include="src\lang\translations\id-ID.yaml" />
-    <Content Include="src\lang\translations\is-IS.yaml" />
-    <Content Include="src\lang\translations\it-IT.yaml" />
-    <Content Include="src\lang\translations\ja-JP.yaml" />
-    <Content Include="src\lang\translations\ka-GE.yaml" />
-    <Content Include="src\lang\translations\ko-KR.yaml" />
-    <Content Include="src\lang\translations\ku-TR.yaml" />
-    <Content Include="src\lang\translations\lt-LT.yaml" />
-    <Content Include="src\lang\translations\mn-MN.yaml" />
-    <Content Include="src\lang\translations\ms-MY.yaml" />
-    <Content Include="src\lang\translations\nl-NL.yaml" />
-    <Content Include="src\lang\translations\no-NO.yaml" />
-    <Content Include="src\lang\translations\pl-PL.yaml" />
-    <Content Include="src\lang\translations\pt-BR.yaml" />
-    <Content Include="src\lang\translations\pt-PT.yaml" />
-    <Content Include="src\lang\translations\ro-RO.yaml" />
-    <Content Include="src\lang\translations\ru-RU.yaml" />
-    <Content Include="src\lang\translations\si-LK.yaml" />
-    <Content Include="src\lang\translations\sk-SK.yaml" />
-    <Content Include="src\lang\translations\sl-SI.yaml" />
-    <Content Include="src\lang\translations\sr-CS.yaml" />
-    <Content Include="src\lang\translations\sr-SP.yaml" />
-    <Content Include="src\lang\translations\sv-SE.yaml" />
-    <Content Include="src\lang\translations\th-TH.yaml" />
-    <Content Include="src\lang\translations\tr-TR.yaml" />
-    <Content Include="src\lang\translations\uk-UA.yaml" />
-    <Content Include="src\lang\translations\vi-VN.yaml" />
-    <Content Include="src\lang\translations\zh-CN.yaml" />
-    <Content Include="src\lang\translations\zh-TW.yaml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="src\BooleanDropdown\" />
-    <Folder Include="src\BooleanExample\" />
     <Folder Include="src\BooleanNullable\" />
-    <Folder Include="src\lang\" />
-    <Folder Include="src\lang\translations\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\BooleanDropdown\index.ts" />
-    <TypeScriptCompile Include="src\BooleanExample\index.ts" />
-    <TypeScriptCompile Include="src\lang\index.ts" />
-    <TypeScriptCompile Include="src\lang\set-language.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

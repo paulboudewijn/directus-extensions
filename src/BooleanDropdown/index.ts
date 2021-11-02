@@ -3,8 +3,8 @@ import InterfaceBooleanDropdown from './boolean-dropdown.vue';
 
 export default defineInterface({
 	id: 'boolean-dropdown',
-	name: '$t:interfaces.boolean.dropdown',
-	description: '',
+	name: 'Dropdown',
+	description: '$t:displays.boolean.description',
 	icon: 'arrow_drop_down_circle',
 	component: InterfaceBooleanDropdown,
 	types: ['boolean'],
@@ -12,58 +12,27 @@ export default defineInterface({
 	recommendedDisplays: ['boolean'],
 	options: [
 		{
-			field: 'choices',
-			type: 'json',
-			name: '$t:choices',
+			field: 'labelOn',
+			name: '$t:displays.boolean.label_on',
+			type: 'string',
 			meta: {
-				width: 'full',
-				interface: 'list',
+				interface: 'input',
+				width: 'half',
 				options: {
-					placeholder: '$t:interfaces.select-dropdown.choices_placeholder',
-					template: '{{ text }}',
-					fields: [
-						{
-							field: 'text',
-							type: 'string',
-							name: '$t:text',
-							meta: {
-								interface: 'input',
-								width: 'half',
-								options: {
-									placeholder: '$t:interfaces.select-dropdown.choices_name_placeholder',
-								},
-							},
-						},
-						{
-							field: 'value',
-							type: 'string',
-							name: '$t:value',
-							meta: {
-								interface: 'input',
-								options: {
-									font: 'monospace',
-									placeholder: '$t:interfaces.select-dropdown.choices_value_placeholder',
-								},
-								width: 'half',
-							},
-						},
-					],
+					placeholder: '$t:displays.boolean.label_on_placeholder',
 				},
 			},
 		},
 		{
-			field: 'allowOther',
-			name: '$t:interfaces.select-dropdown.allow_other',
-			type: 'boolean',
+			field: 'labelOff',
+			name: '$t:displays.boolean.label_off',
+			type: 'string',
 			meta: {
+				interface: 'input',
 				width: 'half',
-				interface: 'boolean',
 				options: {
-					label: '$t:interfaces.select-dropdown.allow_other_label',
+					placeholder: '$t:displays.boolean.label_off_placeholder',
 				},
-			},
-			schema: {
-				default_value: false,
 			},
 		},
 		{

@@ -8,7 +8,6 @@
 			  :disabled="disabled"
 			  :show-deselect="allowNone"
 			  :placeholder="placeholder"
-			  :allow-other="allowOther"
 			  @update:model-value="$emit('input', $event)">
 		<template v-if="icon" #prepend>
 			<v-icon :name="icon" />
@@ -17,9 +16,8 @@
 </template>
 
 <script lang="ts">
-	import { useI18n } from 'vue-i18n';
+    import { useI18n } from 'vue-i18n';
 	import { defineComponent, PropType } from 'vue';
-	//import { i18n } from '@/lang';
 
 	type Option = {
 		text: string;
@@ -37,10 +35,14 @@
 				type: String,
 				default: null,
 			},
-			choices: {
-				type: Array as PropType<Option[]>,
-                default: [{ "text": "Beschikbaar", "value": "true" }, { "text": "Niet beschikaar", "value": "false" }],
-			},
+            labelOn: {
+                type: String,
+                default: "on",
+            },
+            labelOff: {
+                type: String,
+                default: "off",
+            },
 			icon: {
 				type: String,
 				default: null,
@@ -51,18 +53,21 @@
 			},
 			placeholder: {
 				type: String,
-				default: () => i18n.global.t('select_an_item'),
-			},
-			allowOther: {
-				type: Boolean,
-				default: false,
+                default: null
 			},
 		},
-		emits: ['input'],
-		setup() {
+        data(props) {
+            const { t } = useI18n();
+
+			return {
+                choices: [{ "value": 1, "text": props.labelOn }, { "value": 0, "text": props.labelOff }]
+            }
+		},
+        setup(props) {
 			const { t } = useI18n();
 
-			return { t };
-		},
+            return { t };
+        },
+		emits: ['input'],
 	});
 </script>
