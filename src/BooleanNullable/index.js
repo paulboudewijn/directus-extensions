@@ -1,12 +1,12 @@
-import { defineDisplay } from '@directus/shared/utils';
-import DisplayBooleanNullable from './boolean-nullable.vue';
+import { defineInterface } from '@directus/shared/utils';
+import InterfaceBooleanNullable from './boolean-nullable.vue';
 
 export default defineInterface({
 	id: 'boolean',
-	name: '$t:interfaces.boolean.toggle',
+	name: '$t:interfaces.boolean.nullable',
 	description: '$t:interfaces.boolean.description',
 	icon: 'check_box',
-	component: InterfaceBoolean,
+	component: InterfaceBooleanNullable,
 	types: ['boolean'],
 	group: 'selection',
 	recommendedDisplays: ['boolean'],
