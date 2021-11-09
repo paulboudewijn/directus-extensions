@@ -5,8 +5,8 @@
   "main": "index.js",
   "directus:extension": {
     "type": "module",
-    "path": "dist/BooleanDropdown/index.js",
-    "source": "src/BooleanDropdown/index.ts",
+    "path": "dist/nterfaces/BooleanDropdown/index.js",
+    "source": "src/Interfaces/BooleanDropdown/index.ts",
     "host": "^9.0.0-rc.99",
     "hidden": false
   },

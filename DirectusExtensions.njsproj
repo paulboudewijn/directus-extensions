@@ -34,17 +34,18 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\BooleanDropdown\boolean-dropdown.vue" />
-    <Content Include="src\BooleanNullable\boolean-nullable.vue" />
-    <Content Include="src\BooleanNullable\index.js" />
+    <Content Include="src\Interfaces\BooleanDropdown\boolean-dropdown.vue" />
+    <Content Include="src\Interfaces\BooleanNullable\boolean-nullable.vue" />
+    <Content Include="src\Interfaces\BooleanNullable\index.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
-    <Folder Include="src\BooleanDropdown\" />
-    <Folder Include="src\BooleanNullable\" />
+    <Folder Include="src\Interfaces\" />
+    <Folder Include="src\Interfaces\BooleanDropdown\" />
+    <Folder Include="src\Interfaces\BooleanNullable\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\BooleanDropdown\index.ts" />
+    <TypeScriptCompile Include="src\Interfaces\BooleanDropdown\index.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
