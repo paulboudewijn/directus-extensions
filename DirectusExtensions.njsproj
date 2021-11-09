@@ -34,12 +34,15 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\Hooks\FeatureAfterInsert\index.js" />
     <Content Include="src\Interfaces\BooleanDropdown\boolean-dropdown.vue" />
     <Content Include="src\Interfaces\BooleanNullable\boolean-nullable.vue" />
     <Content Include="src\Interfaces\BooleanNullable\index.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\" />
+    <Folder Include="src\Hooks\" />
+    <Folder Include="src\Hooks\FeatureAfterInsert\" />
     <Folder Include="src\Interfaces\" />
     <Folder Include="src\Interfaces\BooleanDropdown\" />
     <Folder Include="src\Interfaces\BooleanNullable\" />
