@@ -60,7 +60,7 @@
             const { t } = useI18n();
 
 			return {
-                choices: [{ "value": true, "text": props.labelOn }, { "value": false, "text": props.labelOff }]
+                choices: [{ "value": 1, "text": props.labelOn }, { "value": 0, "text": props.labelOff }]
             }
 		},
         setup(props) {

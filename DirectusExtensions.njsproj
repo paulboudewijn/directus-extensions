@@ -48,7 +48,10 @@
     <Folder Include="src\Interfaces\BooleanNullable\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\Interfaces\BooleanDropdown\index.ts" />
+    <TypeScriptCompile Include="src\BooleanDropdown\index.ts" />
+    <TypeScriptCompile Include="src\BooleanExample\index.ts" />
+    <TypeScriptCompile Include="src\lang\index.ts" />
+    <TypeScriptCompile Include="src\lang\set-language.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
