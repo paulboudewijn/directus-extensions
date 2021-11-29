@@ -1,6 +1,6 @@
 module.exports = function registerHook({ action }) {
-	action('feature.items.create', (input, { database }) => {
-		database.raw('exec [dbo].[insert_missing_location_features]').then(() => {
+	action('feature.items.update', (input, { database }) => {
+			database.raw('exec [dbo].[insert_missing_location_features]').then(() => {
 			//console.log("stored procedure executed");
 		})
 		.catch((e) => {
