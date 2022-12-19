@@ -34,13 +34,6 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\Hooks\FeatureAfterInsert\index.js" />
-    <Content Include="src\Hooks\FeatureAfterUpdate\index.js" />
-    <Content Include="src\Hooks\LocationAfterInsert\index.js" />
-    <Content Include="src\Hooks\LocationAfterUpdate\index.js" />
-    <Content Include="src\Hooks\LocationLabelAfterDelete\index.js" />
-    <Content Include="src\Hooks\LocationLabelAfterInsert\index.js" />
-    <Content Include="src\Hooks\LocationLabelAfterUpdate\index.js" />
     <Content Include="src\Hooks\UrenAfterInsert\index.js" />
     <Content Include="src\Hooks\UrenAfterUpdate\index.js" />
     <Content Include="src\Interfaces\BooleanDropdown\boolean-dropdown.vue" />
@@ -52,13 +45,6 @@
     <Folder Include="src\BooleanDropdown\" />
     <Folder Include="src\BooleanExample\" />
     <Folder Include="src\Hooks\" />
-    <Folder Include="src\Hooks\FeatureAfterInsert\" />
-    <Folder Include="src\Hooks\FeatureAfterUpdate\" />
-    <Folder Include="src\Hooks\LocationAfterInsert\" />
-    <Folder Include="src\Hooks\LocationAfterUpdate\" />
-    <Folder Include="src\Hooks\LocationLabelAfterDelete\" />
-    <Folder Include="src\Hooks\LocationLabelAfterInsert\" />
-    <Folder Include="src\Hooks\LocationLabelAfterUpdate\" />
     <Folder Include="src\Hooks\UrenAfterInsert\" />
     <Folder Include="src\Hooks\UrenAfterUpdate\" />
     <Folder Include="src\Interfaces\" />
